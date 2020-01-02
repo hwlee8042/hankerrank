@@ -25,4 +25,19 @@ public class hrTest {
 
          assertThat(hr.gradingStudents(input), is(b));
      }
+	@Test
+    public void gradeStudentTest2(){
+         ArrayList<Integer> input = new ArrayList<>();
+         input.add(73);
+         input.add(67);
+         input.add(38);
+         input.add(33);
+         List<Integer> b= new ArrayList<>();
+         b.add(75);
+         b.add(67);
+         b.add(40);
+         b.add(33);
+
+         assertThat(hr.gradingStudents2(input), is(b));
+     }
 }
