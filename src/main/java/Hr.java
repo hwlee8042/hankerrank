@@ -31,26 +31,27 @@ public class Hr {
 	2.두 번째 캥거루의 시작 위치는 첫 번째 캥거루의 시작 위치보다 앞에 있다.(x1<x2) 
 	  따라서 두번째 캥거루가 더 빠른 속도로 이동하면(v1<v2) 이미 앞서 있기 때문에 첫 번째 캥거루는 절대 따라 잡을 수 없으므로 "NO" 출력
 	*/
-	static String result="NO";
-
-       public static String kangaroo(int x1, int v1, int x2, int v2) {
-              if(v2>v1){
-                  result="NO";
+	 public static String kangaroo(int x1, int v1, int x2, int v2) {
+              if(v2>v1 || v2==v1){
+                 return "NO";
               }else{
-                kangarooMeet(x1,v1,x2,v2);
+                return kangarooMeet(x1,v1,x2,v2);
               }
-              return result;
+           
           }
     
-       public static void kangarooMeet(int x1,int v1,int x2, int v2){
+       public static String kangarooMeet(int x1,int v1,int x2, int v2){
               int idx=0;
               while(x2>x1&&idx<=10000){
                   idx++;
                   if(x1+v1*idx == x2+v2*idx){
-                     result= "YES";
-                     break;
+                     return "YES";
+                     
+                  }else if(x1+v1*idx>x2+v2*idx){
+                      break;
                   }
              }
+             return "NO";
        }  
 }
 
