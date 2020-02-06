@@ -1,5 +1,5 @@
 public class CircularArraRotation {
-	 int[] circularArrayRotation(int[] a, int k, int[] queries) {
+	 public int[] circularArrayRotation(int[] a, int k, int[] queries) {
 	     
 	   
 	      for(int j=0;j<k;j++){
