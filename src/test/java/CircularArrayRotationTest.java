@@ -7,7 +7,7 @@ import org.junit.Test;
 public class CircularArrayRotationTest {
 	@Test
 	public void testOne(){
-	    CircularArraRotation circularArrayRotation = new CircularArraRotation();
+	CircularArraRotation circularArrayRotation = new CircularArraRotation();
  
         int[] a = {1, 2, 3};
         int[] queries = {0, 1, 2};
